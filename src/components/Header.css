@@ -119,6 +119,8 @@
 .header-cta {
   padding: 10px 24px;
   font-size: 0.9rem;
+  position: relative;
+  z-index: 101;
 }
 
 .header-cta-desktop {

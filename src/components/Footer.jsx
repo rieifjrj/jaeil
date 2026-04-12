@@ -39,9 +39,9 @@ export default function Footer() {
           </div>
           <div className="footer-contact">
             <h4>연락처</h4>
-            <div className="footer-contact-item">
+            <a href="tel:01041134564" className="footer-contact-item">
               <HiPhone /> 010-4113-4564
-            </div>
+            </a>
             <div className="footer-contact-item">
               <HiMail /> itable@naver.com
             </div>

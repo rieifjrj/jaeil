@@ -2,7 +2,7 @@ import { HiPhone, HiMail, HiLocationMarker, HiClock } from 'react-icons/hi'
 import './Contact.css'
 
 const contactInfo = [
-  { icon: <HiPhone />, label: '전화', value: '010-4113-4564' },
+  { icon: <HiPhone />, label: '전화', value: '010-4113-4564', href: 'tel:01041134564' },
   { icon: <HiMail />, label: '이메일', value: 'itable@naver.com' },
   { icon: <HiLocationMarker />, label: '주소', value: '화성시 팔탄면 덕우공단2길 46-14 제일금속' },
   { icon: <HiClock />, label: '운영시간', value: '평일 09:00 - 18:00' },
@@ -25,7 +25,11 @@ export default function Contact() {
                 <span className="contact-icon">{c.icon}</span>
                 <div>
                   <strong>{c.label}</strong>
-                  <p>{c.value}</p>
+                  {c.href ? (
+                    <p><a href={c.href} style={{ color: 'inherit', textDecoration: 'none' }}>{c.value}</a></p>
+                  ) : (
+                    <p>{c.value}</p>
+                  )}
                 </div>
               </li>
             ))}
