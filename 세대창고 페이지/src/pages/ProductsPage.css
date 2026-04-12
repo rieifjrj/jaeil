@@ -1,0 +1,208 @@
+/* 페이지 헤더 */
+.pp-hero {
+  background: linear-gradient(135deg, #0a1628 0%, #0d2847 50%, #0a3a6b 100%);
+  padding: 140px 0 60px;
+  text-align: center;
+  color: #fff;
+}
+
+.pp-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.pp-hero p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* 메인 카드 */
+.pp-card {
+  max-width: 900px;
+  margin: 48px auto 80px;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* 캐러셀 */
+.pp-carousel-wrap {
+  position: relative;
+  background: var(--bg-light);
+  border-bottom: 1px solid var(--border);
+}
+
+.pp-carousel {
+  padding-bottom: 40px;
+}
+
+.pp-slide {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e8f4fd, #f0f4f8);
+}
+
+.pp-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pp-slide-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* 캐러셀 네비게이션 */
+.pp-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.pp-nav:hover {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.pp-nav-prev {
+  left: 12px;
+}
+
+.pp-nav-next {
+  right: 12px;
+}
+
+/* Swiper pagination */
+.pp-carousel .swiper-pagination-bullet {
+  background: var(--primary);
+  opacity: 0.3;
+}
+
+.pp-carousel .swiper-pagination-bullet-active {
+  opacity: 1;
+  width: 24px;
+  border-radius: 6px;
+}
+
+/* 사이즈 테이블 */
+.pp-tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pp-table-group {
+  padding: 32px;
+}
+
+.pp-table-group:first-child {
+  border-right: 1px solid var(--border);
+}
+
+.pp-table-header {
+  margin-bottom: 20px;
+}
+
+.pp-table-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--primary);
+}
+
+.pp-table-header span {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.pp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pp-table th {
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+  letter-spacing: 0.5px;
+}
+
+.pp-table td {
+  padding: 14px 12px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.pp-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pp-td-label {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.pp-td-size {
+  font-weight: 500;
+  color: var(--text-gray);
+  letter-spacing: 0.3px;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .pp-hero {
+    padding: 120px 0 40px;
+  }
+
+  .pp-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .pp-card {
+    margin: 24px auto 60px;
+  }
+
+  .pp-slide {
+    height: 260px;
+  }
+
+  .pp-tables {
+    grid-template-columns: 1fr;
+  }
+
+  .pp-table-group:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .pp-table-group {
+    padding: 24px;
+  }
+}

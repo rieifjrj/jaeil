@@ -1,0 +1,228 @@
+/* 페이지 헤더 */
+.pp-hero {
+  background: linear-gradient(135deg, #0a1628 0%, #0d2847 50%, #0a3a6b 100%);
+  padding: 140px 0 60px;
+  text-align: center;
+  color: #fff;
+}
+
+.pp-hero h1 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.pp-hero p {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* 섹션 */
+.pp-section {
+  margin: 280px 0;
+}
+
+.pp-section:first-child {
+  margin-top: 48px;
+}
+
+.pp-section:last-child {
+  margin-bottom: 280px;
+}
+
+/* 섹션 헤더 */
+.pp-section-header {
+  max-width: 900px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.pp-product-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.pp-product-desc {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+/* 가격 */
+.pp-price-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.pp-discount-badge {
+  background: #ff4d4f;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+.pp-original-price {
+  font-size: 0.95rem;
+  color: #bbb;
+  text-decoration: line-through;
+}
+
+.pp-final-price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.pp-final-price small {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* 메인 카드 */
+.pp-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* 이미지 그리드 */
+.pp-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  background: transparent;
+  padding: 12px;
+}
+
+.pp-image-item {
+  background: linear-gradient(135deg, #e8f4fd, #f0f4f8);
+  border-radius: 8px;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pp-image-item img {
+  width: 100%;
+  flex: 1;
+  object-fit: contain;
+  padding: 8px;
+}
+
+.pp-image-label {
+  width: 100%;
+  text-align: center;
+  padding: 10px 8px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* 정보 영역 */
+.pp-info {
+  padding: 32px;
+}
+
+/* 사이즈 테이블 */
+.pp-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.pp-table th {
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+  letter-spacing: 0.5px;
+}
+
+.pp-table td {
+  padding: 14px 12px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.pp-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pp-td-label {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.pp-td-size {
+  font-weight: 500;
+  color: var(--text-gray);
+  letter-spacing: 0.3px;
+}
+
+.pp-ai-notice {
+  font-size: 0.8rem;
+  color: #bbb;
+  margin-top: 16px;
+}
+
+/* 반응형 - 태블릿 */
+@media (max-width: 1024px) {
+  .pp-hero {
+    padding: 120px 0 40px;
+  }
+
+  .pp-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .pp-section {
+    margin: 200px 0;
+  }
+
+  .pp-info {
+    padding: 24px;
+  }
+}
+
+/* 반응형 - 스마트폰 */
+@media (max-width: 480px) {
+  .pp-section {
+    margin: 144px 0;
+  }
+
+  .pp-image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pp-section-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .pp-price-box {
+    align-items: flex-start;
+  }
+
+  .pp-info {
+    padding: 20px;
+  }
+}

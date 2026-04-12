@@ -1,0 +1,145 @@
+.products-single-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 테이블 영역 */
+.products-tables {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.products-table-group {
+  padding: 32px;
+}
+
+.products-table-group:first-child {
+  border-right: 1px solid var(--border);
+}
+
+.ptg-header {
+  margin-bottom: 20px;
+}
+
+.ptg-header h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--primary);
+}
+
+.ptg-header span {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.products-table th {
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-align: left;
+  border-bottom: 2px solid var(--border);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.products-table td {
+  padding: 14px 12px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.products-table tr:last-child td {
+  border-bottom: none;
+}
+
+.pt-label {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.pt-size {
+  font-family: 'Pretendard', monospace;
+  font-weight: 500;
+  color: var(--text-gray);
+  letter-spacing: 0.3px;
+}
+
+/* 공통 사양 */
+.products-common {
+  padding: 32px;
+  background: var(--bg-light);
+  border-top: 1px solid var(--border);
+}
+
+.products-common h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.products-feature-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.products-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-gray);
+}
+
+.pf-check {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.products-note {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  margin-top: 8px;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .products-tables {
+    grid-template-columns: 1fr;
+  }
+
+  .products-table-group:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .products-table-group {
+    padding: 24px;
+  }
+
+  .products-common {
+    padding: 24px;
+  }
+
+  .products-feature-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-feature-list {
+    grid-template-columns: 1fr;
+  }
+}

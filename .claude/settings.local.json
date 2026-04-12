@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(timeout 5 cat \"C:/TEMPFO~1/claude/C--Users-----Desktop---------/16688a86-842b-42c7-9d12-4bc578f52445/tasks/bjnubgrcg.output\")",
+      "Bash(cp:*)"
+    ]
+  }
+}
