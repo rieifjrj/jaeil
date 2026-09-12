@@ -3,7 +3,7 @@ import { ProductSection } from './Products';
 import Carousel from './Carousel';
 import { showProjects } from './data';
 export default function Home(){return <>
-<section className="hero"><div className="hero-copy"><p className="eyebrow">SPACE, MADE USEFUL.</p><h1>공간을 이해하고,<br />쓸모를 만듭니다.</h1><p className="intro">아파트의 여유 공간을 세대의 수납 공간으로.<br />현장에 맞춘 세대창고, 제일금속.</p><Link className="solid" to="/products">제품 살펴보기 <span>↗</span></Link><div className="hero-bottom"><span>세대창고 제작 설치</span><span>01 — 02</span></div></div><figure className="hero-image"><img src="/img/single/2100_타공_그레이.png" alt="회색 타공 싱글도어 세대창고 외관 예시" /><figcaption><span>싱글도어 타공 패널</span><span>제품 이미지 / AI 편집</span></figcaption></figure></section>
+<section className="hero"><div className="hero-copy"><p className="eyebrow">SPACE, MADE USEFUL.</p><h1>공간을 이해하고,<br />쓸모를 만듭니다.</h1><p className="intro">아파트의 여유 공간을 세대의 수납 공간으로.<br />현장에 맞춘 세대창고, 제일금속.</p><Link className="solid" to="/products">제품 살펴보기 <span>↗</span></Link><div className="hero-bottom"><span>세대창고 제작 설치</span><span>01 — 02</span></div></div><figure className="hero-image"><img src="/img/single/2100_타공_그레이.webp" alt="회색 타공 싱글도어 세대창고 외관 예시" /><figcaption><span>싱글도어 타공 패널</span><span>제품 이미지 / AI 편집</span></figcaption></figure></section>
 <div className="intro-strip"><span>공간에 맞는 구조.</span><span>용도에 맞는 사양.</span><span>현장을 고려한 설치.</span><Link to="/guide">제작 설치 안내 <span>↗</span></Link></div>
 <ProductSection />
 <section className="section gallery" id="gallery"><div className="section-heading"><div><p className="eyebrow">02 / GALLERY</p><h2>색상과 마감을 사진으로</h2></div><Link className="text-link" to="/products">전체 제품 보기 ↗</Link></div><Carousel /><p className="caption">사진을 누르면 해당 색상의 제품 상세로 이동합니다. 제품 이미지는 생성형 AI로 편집했습니다.</p></section>

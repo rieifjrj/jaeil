@@ -6,13 +6,13 @@ export function Price({ product }) { return <div className="price-row"><span cla
 
 // 메인에서는 대표 제품 두 가지만, 제품소개에서는 색상 전체를 펼친다.
 export function ProductSection({ full = false }) {
-  if (!full) return <section className="section products" id="products"><div className="section-heading"><div><p className="eyebrow">01 / PRODUCTS</p><h2>필요한 수납에 맞는 선택</h2></div><Link className="text-link" to="/products">전체 제품 보기 ↗</Link></div><div className="product-grid">{products.map((p, i) => <Link className="product" to={`/products/${p.id}`} key={p.id}><div className="product-image"><span className="image-index">TYPE 0{i + 1}</span><img src={p.colors[0].src} alt={`${p.name} ${p.colors[0].label} 제품 예시`} loading="lazy" /><span className="image-note">AI 편집 이미지</span></div><div className="product-title"><div><h3>{p.name}</h3><p>{p.description}</p></div><span className="round-arrow">↗</span></div><Price product={p} /><div className="spec"><span>{p.type}</span><span>색상 {p.colors.length}종</span><span>규격 보기 +</span></div></Link>)}</div></section>;
+  if (!full) return <section className="section products" id="products"><div className="section-heading"><div><p className="eyebrow">01 / PRODUCTS</p><h2>필요한 수납에 맞는 선택</h2></div><Link className="text-link" to="/products">전체 제품 보기 ↗</Link></div><div className="product-grid">{products.map((p, i) => <Link className="product" to={`/products/${p.id}`} key={p.id}><div className="product-image"><span className="image-index">TYPE 0{i + 1}</span><img src={p.colors[0].thumb} alt={`${p.name} ${p.colors[0].label} 제품 예시`} loading="lazy" /><span className="image-note">AI 편집 이미지</span></div><div className="product-title"><div><h3>{p.name}</h3><p>{p.description}</p></div><span className="round-arrow">↗</span></div><Price product={p} /><div className="spec"><span>{p.type}</span><span>색상 {p.colors.length}종</span><span>규격 보기 +</span></div></Link>)}</div></section>;
 
   return <section className="section products" id="products">
     <div className="section-heading"><div><p className="eyebrow">01 / PRODUCTS</p><h2>제품소개</h2></div><span className="text-link">전 규격 자체 생산</span></div>
     {products.map(p => <article className="product-block" key={p.id}>
       <div className="block-head"><div><h3>{p.name}</h3><p>{p.description}</p></div><Price product={p} /></div>
-      <div className="color-grid">{p.colors.map((c, i) => <Link className="color-item" to={`/products/${p.id}?color=${i}`} key={c.src}><img src={c.src} alt={`${p.name} ${c.label}`} loading="lazy" /><span>{c.label}</span></Link>)}</div>
+      <div className="color-grid">{p.colors.map((c, i) => <Link className="color-item" to={`/products/${p.id}?color=${i}`} key={c.src}><img src={c.thumb} alt={`${p.name} ${c.label}`} loading="lazy" /><span>{c.label}</span></Link>)}</div>
       <div className="block-foot"><span>{p.type}</span><span>{p.spec}</span><span>색상 {p.colors.length}종</span><Link className="text-link" to={`/products/${p.id}`}>규격과 상세 보기 ↗</Link></div>
     </article>)}
     <div className="common-spec"><h3>공통 사양</h3><ul>{commonFeatures.map(f => <li key={f}>{f}</li>)}</ul><p className="caption">표준 규격 기준이며, 현장 상황에 따라 맞춤 제작이 가능합니다. 제품 사진은 이해를 돕기 위해 생성형 AI로 편집했습니다.</p></div>
@@ -33,7 +33,7 @@ export function ProductDetail() {
     <div className="detail-grid">
       <div>
         <img className="detail-image" src={color.src} alt={`${p.name} ${color.label} 제품 외관`} />
-        <div className="swatch-row">{p.colors.map((c, i) => <button className={i === active ? 'swatch active' : 'swatch'} key={c.src} onClick={() => setActive(i)} aria-pressed={i === active}><img src={c.src} alt="" loading="lazy" /><span>{c.label}</span></button>)}</div>
+        <div className="swatch-row">{p.colors.map((c, i) => <button className={i === active ? 'swatch active' : 'swatch'} key={c.src} onClick={() => setActive(i)} aria-pressed={i === active}><img src={c.thumb} alt="" loading="lazy" /><span>{c.label}</span></button>)}</div>
         <p className="caption">{color.finish} / {color.label} — 생성형 AI로 편집된 제품 예시입니다.</p>
       </div>
       <div>

@@ -33,7 +33,7 @@ export default function Carousel() {
   return <div className="carousel">
     <div className="carousel-track" ref={track} tabIndex={0} role="group" aria-label="제품 사진 둘러보기">
       {galleryPhotos.map((photo, i) => <Link className="slide" to={`/products/${photo.productId}?color=${photo.colorIndex}`} key={photo.src}>
-        <img src={photo.src} alt={`${photo.productName} ${photo.label}`} loading={i < 3 ? 'eager' : 'lazy'} />
+        <img src={photo.thumb} alt={`${photo.productName} ${photo.label}`} loading={i < 3 ? 'eager' : 'lazy'} />
         <div className="slide-caption"><strong>{photo.productName}</strong><span>{photo.label}</span></div>
       </Link>)}
     </div>
