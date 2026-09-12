@@ -1,0 +1,1 @@
+export default function Footer(){return <footer><a className="brand" href="/"><span className="brand-mark" aria-hidden="true"></span><span>제일금속<small>JAEIL METAL</small></span></a><div>화성시 팔탄면 덕우공단2길 46-14<br /><a href="mailto:itable@naver.com">itable@naver.com</a></div><div className="footer-note">제일금속<br />제품 이미지는 기존 제공 자료의 AI 편집 이미지입니다.</div></footer>}

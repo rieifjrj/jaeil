@@ -1,0 +1,54 @@
+nav a{font-size:15px;font-weight:600;padding:12px 0}nav a.active{color:#a27743;border-bottom:1px solid currentColor}.solid{display:inline-block}.intro-strip>a{margin-left:auto;font-size:13px}.intro-strip>a span{margin-left:28px}.detail-page h1,.content-page h1{font-size:44px;letter-spacing:-2px}.content-page{max-width:1160px;margin:auto;min-height:65vh}.description{color:var(--muted);font-size:17px;line-height:1.8;margin-bottom:35px}.breadcrumb{display:inline-block;font-size:14px;color:var(--muted);margin-bottom:32px}.detail-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;margin-bottom:45px}.detail-image{width:100%;display:block}.caption{font-size:13px;line-height:1.8;color:var(--muted)}table{width:100%;border-collapse:collapse;font-size:14px;margin:25px 0}th,td{text-align:left;padding:14px 8px;border-bottom:1px solid var(--line)}.layout-example{padding:35px;background:var(--paper);margin:35px 0}.layout-example>p{color:var(--muted);line-height:1.8}.plan{padding:30px;border:1px solid #a5b9c0;margin-top:30px}.storage-row{display:grid;grid-template-columns:repeat(6,1fr)}.storage-row span{display:grid;place-items:center;background:#d4dfe2;height:80px;border:1px solid #78909b;font-size:13px}.walkway{text-align:center;padding:32px 0;font-size:14px;color:#677d88}.process-list{margin:40px 0 60px}.process-list>div{display:flex;gap:30px;align-items:center;padding:26px 0;border-bottom:1px solid var(--line)}.process-list span{color:#8c9ba2;font-size:14px}.process-list h2{font-size:23px}.guide-prices{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:30px 0 45px}.guide-prices>div{border:1px solid var(--line);padding:25px}.company-block{margin:40px 0}.company-block dl{font-size:16px}.company-block dl div{padding:20px 0}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.skip-link{position:absolute;top:-100px;left:20px;z-index:100;padding:15px;background:#fff}.skip-link:focus{top:10px}@media(max-width:700px){nav a{display:block;padding:14px 0}.intro-strip>a{display:none}.detail-grid{grid-template-columns:1fr;gap:30px}.detail-page h1,.content-page h1{font-size:35px}.guide-prices{grid-template-columns:1fr}.process-list h2{font-size:19px}.layout-example{padding:20px}.plan{padding:10px}.storage-row span{height:55px}.walkway{font-size:12px}.company-block dl{font-size:14px}.detail-page table{font-size:12px}.detail-page td,.detail-page th{padding:12px 4px}}
+
+/* 제품소개 전체 목록 — 제품별로 색상 사진을 모두 펼친다 */
+.product-block{border-top:1px solid var(--line);padding-top:34px;margin-bottom:66px}
+.block-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.block-head h3{font-size:29px;font-weight:600;letter-spacing:-1px;margin:0 0 8px}
+.block-head p{margin:0;font-size:14px;color:var(--muted)}
+.block-head .price-row{margin:0}
+.color-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.color-item img{width:100%;height:215px;object-fit:cover;background:#e9edee;display:block}
+.color-item span{display:block;padding:12px 0;font-size:13px;color:var(--muted);border-bottom:1px solid var(--line)}
+.color-item:hover span{color:var(--ink)}
+.block-foot{display:flex;align-items:center;flex-wrap:wrap;gap:22px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);margin-top:26px;padding-top:16px}
+.block-foot .text-link{margin-left:auto;font-size:13px}
+.common-spec{background:var(--paper);padding:34px}
+.common-spec h3{font-size:20px;font-weight:600;margin:0 0 20px}
+.common-spec ul{list-style:none;padding:0;margin:0 0 22px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px 24px;font-size:14px}
+.common-spec li:before{content:'✓';color:#8a7040;margin-right:10px}
+.common-spec .caption{margin:0}
+
+/* 제품 상세 — 큰 대표 이미지 아래에서 색상을 고른다 */
+.swatch-row{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 14px}
+.swatch{width:80px;padding:0;text-align:center}
+.swatch img{width:100%;height:62px;object-fit:cover;background:#e9edee;border:1px solid var(--line);display:block}
+.swatch span{display:block;padding-top:6px;font-size:11px;line-height:1.4;color:var(--muted);word-break:keep-all}
+.swatch.active img{border:2px solid var(--navy)}
+.swatch.active span{color:var(--ink);font-weight:600}
+.feature-list{list-style:none;padding:0;margin:26px 0 30px;display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;font-size:13px;color:var(--muted)}
+.feature-list li:before{content:'✓';color:#8a7040;margin-right:8px}
+
+@media(max-width:1050px){.color-grid{grid-template-columns:repeat(3,1fr)}.color-item img{height:190px}}
+@media(max-width:700px){.color-grid{grid-template-columns:repeat(2,1fr);gap:14px}.color-item img{height:150px}.color-item span{font-size:12px;padding:10px 0}.block-head h3{font-size:24px}.block-foot{gap:14px}.block-foot .text-link{margin-left:0;width:100%}.common-spec{padding:22px}.common-spec ul{grid-template-columns:1fr}.feature-list{grid-template-columns:1fr}.swatch{width:66px}.swatch img{height:52px}}
+
+/* 메인 사진 캐러셀 — 스크롤 스냅으로 넘긴다 */
+.gallery .caption{margin:22px 0 0}
+.carousel-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-track:focus-visible{outline:3px solid #b28b58;outline-offset:5px}
+.slide{flex:0 0 calc((100% - 48px)/3);scroll-snap-align:start}
+.slide img{width:100%;height:330px;object-fit:cover;background:#e9edee;display:block}
+.slide-caption{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-size:13px}
+.slide-caption strong{font-weight:600}
+.slide-caption span{color:var(--muted)}
+.slide:hover .slide-caption{border-bottom-color:var(--ink)}
+.carousel-bar{display:flex;align-items:center;justify-content:space-between;margin-top:26px}
+.carousel-count{font-size:12px;letter-spacing:1.5px;color:var(--muted)}
+.carousel-count i{font-style:normal;margin:0 7px}
+.carousel-buttons{display:flex;gap:10px}
+.carousel-buttons button{width:48px;height:48px;border:1px solid var(--line);font-size:17px}
+.carousel-buttons button:hover:not(:disabled){background:var(--paper)}
+.carousel-buttons button:disabled{color:#c6ced2;cursor:default}
+
+@media(max-width:1050px){.slide{flex:0 0 calc((100% - 24px)/2)}.slide img{height:285px}}
+@media(max-width:700px){.carousel-track{gap:14px}.slide{flex:0 0 84%}.slide img{height:245px}.slide-caption{font-size:12px}.carousel-buttons button{width:44px;height:44px}}
