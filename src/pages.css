@@ -52,3 +52,13 @@ nav a{font-size:15px;font-weight:600;padding:12px 0}nav a.active{color:#a27743;b
 
 @media(max-width:1050px){.slide{flex:0 0 calc((100% - 24px)/2)}.slide img{height:285px}}
 @media(max-width:700px){.carousel-track{gap:14px}.slide{flex:0 0 84%}.slide img{height:245px}.slide-caption{font-size:12px}.carousel-buttons button{width:44px;height:44px}}
+
+/* 푸터 사업자 정보 */
+.footer-info{flex:1;text-align:center}
+.footer-info p{margin:0 0 3px}
+.footer-info p:last-child{margin-bottom:0}
+.footer-info .sep{margin:0 7px;color:#c3cdd1}
+.footer-info strong{font-weight:700;color:var(--ink)}
+.footer-contact{margin-top:6px}
+.footer-contact a{font-weight:700;color:var(--ink);border-bottom:1px solid var(--line)}
+@media(max-width:700px){.footer-info{text-align:left;line-height:1.8}.footer-info .sep{margin:0 5px}}
